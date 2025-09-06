@@ -38,7 +38,7 @@ const tabs = [
   { id: 'settings', label: '設定', icon: '⚙️' },
 ];
 
-let intervalId: number | null = null;
+let intervalId: ReturnType<typeof setInterval> | null = null;
 
 // タイマーの自動進行
 function startTimerInterval() {
@@ -119,6 +119,7 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  padding: 2rem;
 }
 
 @media (max-width: 768px) {
