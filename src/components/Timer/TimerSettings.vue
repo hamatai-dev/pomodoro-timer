@@ -28,7 +28,7 @@
       </div>
       
       <div class="setting-item">
-        <label for="work-sessions">1ポモドーロあたりの作業時間回数</label>
+        <label for="work-sessions">1ポモドーロあたりの作業回数</label>
         <input
           id="work-sessions"
           v-model.number="localSettings.workSessionsPerCycle"
