@@ -9,12 +9,10 @@
               <TimerDisplay />
               <TimerControls />
             </div>
-
             <!-- 設定タブ -->
             <div v-if="activeTab === 'settings'" class="tab-content">
               <TimerSettings />
             </div>
-
           </template>
         </AppTabs>
       </div>
@@ -45,7 +43,7 @@ function startTimerInterval() {
   if (intervalId) {
     clearInterval(intervalId);
   }
-  
+
   intervalId = setInterval(() => {
     timerStore.tick();
   }, 1000);
@@ -94,7 +92,6 @@ onUnmounted(() => {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
 }
 
 .app-main {
@@ -126,15 +123,15 @@ onUnmounted(() => {
   .app {
     padding: 1rem;
   }
-  
+
   .app-header h1 {
     font-size: 2rem;
   }
-  
+
   .timer-section {
     margin: 0;
   }
-  
+
   .tab-content {
     padding: 1.5rem;
   }
