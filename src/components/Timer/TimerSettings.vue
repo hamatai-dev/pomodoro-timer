@@ -117,8 +117,8 @@ const localSettings = reactive<TimerSettings>({
 });
 
 // 作業者設定のローカル状態
-const localWorkerA = ref('');
-const localWorkerB = ref('');
+const localWorkerA = ref('Aさん');
+const localWorkerB = ref('Bさん');
 
 // 設定を読み込み
 function loadSettings() {
@@ -166,8 +166,10 @@ function resetSettings() {
   timerStore.updateSettings(defaultSettings);
 
   // 作業者設定もリセット
-  localWorkerA.value = '';
-  localWorkerB.value = '';
+  localWorkerA.value = 'Aさん';
+  localWorkerB.value = 'Bさん';
+
+  timerStore.setWorkers('Aさん', 'Bさん');
 
   alert('設定をリセットしました！');
 }

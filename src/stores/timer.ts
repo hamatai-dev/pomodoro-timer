@@ -20,9 +20,12 @@ export const useTimerStore = defineStore('timer', () => {
       warningTime: 1,
       workSessionsPerCycle: 5 // デフォルトで5回の作業時間
     },
-    workers: [],
-    currentDriver: null,
-    currentNavigator: null,
+    workers: [
+      { id: 'worker-a', name: "Aさん", role: 'driver' },
+      { id: 'worker-b', name: "Bさん", role: 'navigator' }
+    ],
+    currentDriver: { id: 'worker-a', name: "Aさん", role: 'driver' },
+    currentNavigator: { id: 'worker-b', name: "Bさん", role: 'navigator' },
     sessionCount: 0
   });
 
